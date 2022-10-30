@@ -1,6 +1,6 @@
 # Leetcode-Cheat-Sheet
 
-# Planned Elements
+## Planned Elements
 
 1. Python Cheat Sheet
 2. Java Cheat Sheet
