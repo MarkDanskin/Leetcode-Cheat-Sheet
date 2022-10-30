@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
+
+/* Containers */
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #393939;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 150vh;
+}
+
+.container {
+    display: flex;
+    max-width: 1500px;
+    background-color: #1d1d1d;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: 0px 2px 10px -1px #000000
+}
+
+.cheatSheet {
+    width: 65%;
+}
+
+.sidebar {
+    width: 35%;
+    border-left: 1px solid white;
+}
+
+.header {
+    width: 100%;
+    max-width: 1500px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background-color: #0c343d;
+    margin-top: 2rem;
+    background-color: #1d1d1d;
+    border-bottom: 1px solid white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    box-shadow: 0px -2px 10px -1px #000000;
+}
+
+
+/* Cheat Sheet Main */
+
+h2 {
+    text-align: center;
+    color: white;
+}
+
+h3 {
+    text-align: center;
+    margin: 0.5rem;
+    color: rgba(241, 55, 95);
+}
+
+button {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0.4em 1rem;
+    text-align: center;
+    background-color: #303030;
+    color: rgb(214, 214, 214);
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px 1px #141414;
+    box-sizing: border-box;
+    min-width: 80px;
+    max-height: 3rem;
+    border: 1px solid black;
+}
+
+.dropDown {
+    box-sizing: border-box;
+    display: none;
+    max-width: 400px;
+    min-width: 400px;
+    background-color: #303030;
+    border-radius: 7px;
+    color: rgb(214, 214, 214);
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 0.5rem;
+    box-shadow: 0px 0px 5px 1px #141414;
+    position: absolute;
+    left: 0px;
+    top: 40px;
+    z-index: 4;
+    white-space: pre-line;
+    width: fit-content;
+    max-width: none;
+}
+
+hr {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    background-color: white;
+    height: 0.5px;
+    border: none;
+    width: 95%;
+}
+
+.item {
+    position: relative;
+}
+
+.show {
+    display: block;
+    border: 1px solid rgba(241, 55, 95,0.5);
+}
+
+.area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1rem;
+    justify-content: center;
+}
+li {
+    padding: 0.5rem 0;
+}
+
+ul, li, pre {
+    margin: 0;
+
+    list-style: none;
+}
+
+/* Methods / Operators / Keywords */
+
+.info {
+    padding: 0.7rem 0.2rem;
+}
+
+.flexContainer {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.7rem 0.2rem;
+}
+
+/* Categories */
+
+.categories{
+    justify-content: baseline;
+
+}
+
+.categories button{
+    padding: 0.4rem 1rem;
+}
+
+/* Algorithms And Data Structures */
+
+.algorithms, .data-structures{
+    flex-direction: column;
+    gap: 0.2rem;
+}
+.algorithms button, .data-structures button{
+    padding: 0.2rem 1rem;
+    width: 100%;
+}
+
+
+/* Dropdown Colors */
+
+.best {
+    color: rgb(0, 173, 144);
+}
+.average {
+    color: rgb(218, 192, 30);
+}
+.worst {
+    color: rgba(241, 55, 95);
+}
+
+/* Button Styles */
+
+
+.selected {
+    border-color: rgba(241, 55, 95,0.5);
+}
+
+.highlight{
+    background-color: rgba(241, 55, 95,0.5);
+    color: black;
+}
