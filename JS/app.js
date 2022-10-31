@@ -1,11 +1,14 @@
 let operators = [
     {
-        name: '-     -=',
-        description: ['test'],
+        name: '-',
+        description: ['Subtraction', 'Set: Difference'],
         type: ['Operators', 'Set'],
-        best: 'asd',
-        worst: 'asd',
-        examples: ['test'],
+        best: '',
+        worst: '',
+        examples: [
+            { example: 'print(4 - 3)\n' + 'Output: 1', name: 'Subtraction' },
+            { example: 'x = {1,2,5}\n' + 'y = {2,3,4}\n' + 'print(x - y)\n' + 'Output: {1,5}', name: 'Set Difference' },
+        ],
         link: '',
         freq: 20844,
     },
@@ -15,103 +18,108 @@ let operators = [
         type: ['Counter', 'Default-Dict', 'Dict', 'String', 'Tuple', 'List', 'Operators'],
         best: '',
         worst: '',
-        examples: ['list[:]', 'string[start:stop:step]', 'tuple[]'],
+        examples: [
+            { example: 'string[start:stop:step]', name: 'Format' },
+            { example: 'list[index]', name: 'Accessing Index' },
+            { example: 'x = [1,2,3]\n' + 'x[:] = x[::-1]\n' + 'Print(x)\n' + 'Output: [3,2,1]', name: 'Reversing a list' },
+        ],
         link: '',
         freq: 11765,
     },
     {
-        name: '@     @=',
-        description: [],
-        type: ['Operators'],
-        best: '',
-        worst: '',
-        examples: [],
-        link: '',
-        freq: 481,
-    },
-    {
-        name: '*     *=',
-        description: ['Multiplication','Splat operator is used to unpack a list into arguments'],
+        name: '*',
+        description: ['Multiplication', 'Splat: Splat operator is used to unpack a list into arguments', 'Multiple concatenation'],
         type: ['String', 'List', 'Operators', 'Tuple'],
         best: '',
         worst: '',
-        examples: [{ example: 'lst(*[1, 2, 3]) is equal to lst(1, 2, 3)', name:'Splat Operator' }],
+        examples: [
+            { example: 'print(3*2)\n' + 'Output: 6', name: 'Multiplication' },
+            { example: 'lst(*[1, 2, 3]) is equal to lst(1, 2, 3)', name: 'Splat Operator' },
+            { example: 'x = [1,2]\n' + 'print(x*2)\n' + 'Output = [1,2,1,2]', name: 'Multiple Concatenation' },
+        ],
         link: '',
         freq: 5555,
     },
     {
-        name: '**     **=',
-        description: [],
+        name: '**',
+        description: ['Exponentiation'],
         type: ['Operators'],
         best: '',
         worst: '',
-        examples: [],
+        examples: [{ example: 'print(2 ** 3)\n' + 'Output: 8', name: 'Exponentiation' }],
         link: '',
         freq: 541,
     },
     {
-        name: '/     /=',
-        description: [],
+        name: '/',
+        description: ['Division'],
         type: ['Operators'],
         best: '',
         worst: '',
-        examples: [],
+        examples: [{ example: 'print(4 / 2)\n' + 'Output: 2', name: 'Division' }],
         link: '',
         freq: 3381,
     },
     {
-        name: '//     //=',
-        description: [],
+        name: '//',
+        description: ['Floor division'],
         type: ['Operators'],
         best: '',
         worst: '',
-        examples: [],
+        examples: [{ example: 'print(5 // 2)\n' + 'Output: 2', name: 'Floor Division' }],
         link: '',
         freq: 1143,
     },
     {
-        name: '&     &=',
-        description: [],
+        name: '&',
+        description: ['Bitwise and: Sets each bit to 1 if both bits are 1', 'Set: Intersection'],
         type: ['Operators', 'Set'],
         best: '',
         worst: '',
-        examples: [],
+        examples: [{}, { example: 'x = {1,2,3}\n' + 'y = {2,3,4}\n' + 'print(x & y)\n' + 'Output: {2,3}', name: 'Set intersection' }],
         link: '',
         freq: 366,
     },
     {
-        name: '%     %=',
-        description: [],
+        name: '%',
+        description: ['Modulo operator calculates the remainder'],
         type: ['Operators'],
         best: '',
         worst: '',
-        examples: [],
+        examples: [{ example: 'print(5 % 2)\n' + 'Output: 1', name: 'Modulo' }],
         link: '',
         freq: 1694,
     },
     {
-        name: '^     =^',
-        description: [],
+        name: '^',
+        description: ['Bitwise XOR', 'Set: Symmetric difference'],
         type: ['Operators', 'Set'],
         best: '',
         worst: '',
-        examples: [],
+        examples: [{}, { example: 'x = {1,2,5}\n' + 'y = {2,3,4}\n' + 'print(x ^ y)\n' + 'Output: {1,3,4,5}', name: 'Set Symmetric Difference' }],
         link: '',
         freq: 1258,
     },
     {
-        name: '+     +=',
-        description: [],
+        name: '+',
+        description: ['Addition / Concatenation'],
         type: ['String', 'List', 'Operators', 'Tuple'],
         best: '',
         worst: '',
-        examples: [],
+        examples: [
+            { example: 'print(4 + 3)\n' + 'Output: 7', name: 'Addition' },
+            { example: 'x = [1,2,3]\n' + 'y = [4,5,6]\n' + 'print(x + y)' + 'Output: [1,2,3,4,5,6]', name: 'Array concatenation' },
+            { example: 'x = "abc"\n' + 'y = "def"\n' + 'print(x + y)]\n' + 'Output: "abcdef"', name: 'String concatenation' },
+        ],
         link: '',
         freq: 12089,
     },
     {
-        name: '<    <=',
-        description: [],
+        name: '<',
+        description: [
+            'Less than',
+            'Is proper subset: x is a proper subset of y if all of the members of set x are inside set y but there is at least one number in set y that is not in set x',
+        ],
         type: ['List', 'Operators', 'Set', 'Tuple'],
         best: '',
         worst: '',
@@ -120,8 +128,18 @@ let operators = [
         freq: 3743,
     },
     {
-        name: '<<     <<=',
-        description: [],
+        name: '<=',
+        description: ['Less than or equal', 'Is subset: set x is a subset of set y if all the numbers in set x are also in set y'],
+        type: ['List', 'Operators', 'Set', 'Tuple'],
+        best: '',
+        worst: '',
+        examples: [],
+        link: '',
+        freq: 3743,
+    },
+    {
+        name: '<<',
+        description: ['Zero fill left shift: Shift left by pushing zeros in from the right and deleting leftmost bits'],
         type: ['Operators'],
         best: '',
         worst: '',
@@ -130,8 +148,18 @@ let operators = [
         freq: 213,
     },
     {
-        name: '==    !=',
-        description: [],
+        name: '==',
+        description: ['Equals'],
+        type: ['Counter', 'Default-Dict', 'Dict', 'List', 'Operators', 'Set', 'Tuple'],
+        best: 'O(n)',
+        worst: 'O(n)',
+        examples: [],
+        link: '',
+        freq: 4727,
+    },
+    {
+        name: '!=',
+        description: ['Not equals'],
         type: ['Counter', 'Default-Dict', 'Dict', 'List', 'Operators', 'Set', 'Tuple'],
         best: '',
         worst: '',
@@ -141,7 +169,7 @@ let operators = [
     },
     {
         name: '=',
-        description: [''],
+        description: ['Assignment Operator', 'Other Assignment Operators: -= += *= **= /= //= &= %= ^= <<= >>= |= ~='],
         type: ['Counter', 'Default-Dict', 'Dict', 'List', 'Operators', 'Set', 'Tuple', 'Deque', 'Heapq', 'String'],
         best: '',
         worst: '',
@@ -150,8 +178,11 @@ let operators = [
         freq: 19388,
     },
     {
-        name: '>    >=',
-        description: [],
+        name: '>',
+        description: [
+            'Greater than',
+            'Is proper superset: set x is a proper superset of set y if all the numbers in set y are also in set x, there is at least one number in set x that is not in set y',
+        ],
         type: ['List', 'Operators', 'Set', 'Tuple'],
         best: '',
         worst: '',
@@ -160,8 +191,18 @@ let operators = [
         freq: 2808,
     },
     {
-        name: '>>     >>=',
-        description: [],
+        name: '>=',
+        description: ['Greater than or equal to', 'Is superset: set x is a superset of set y if all the numbers in set y are also in set x'],
+        type: ['List', 'Operators', 'Set', 'Tuple'],
+        best: '',
+        worst: '',
+        examples: [],
+        link: '',
+        freq: 2808,
+    },
+    {
+        name: '>>',
+        description: ['Signed right shift: Push copies of the leftmost bit in from the left, and delete the rightmost bits'],
         type: ['Operators'],
         best: '',
         worst: '',
@@ -170,18 +211,18 @@ let operators = [
         freq: 88,
     },
     {
-        name: '|     |=',
-        description: [],
+        name: '|',
+        description: ['Bitwise OR: Sets each bit to 1 if one of two bits is 1', 'Set: Union'],
         type: ['Operators', 'Counter', 'Default-Dict', 'Dict', 'Set'],
         best: '',
         worst: '',
-        examples: [],
+        examples: [{}, { example: 'x = {1,2,3}\n' + 'y = {4,5,6}\n' + 'print(x | y)\n' + 'Output: {1,2,3,4,5,6}', name: 'Set Union' }],
         link: '',
         freq: 797,
     },
     {
-        name: '~     ~=',
-        description: [],
+        name: '~',
+        description: ['Bitwise NOT: Inverts all bits'],
         type: ['Operators'],
         best: '',
         worst: '',
@@ -288,7 +329,11 @@ let keywords = [
         type: ['Keywords'],
         best: '',
         worst: '',
-        examples: [],
+        examples: [
+            { example: 'x = [1,2,3,4]\narr = []\nfor i in x: arr.append(i)\nprint(arr)\nOutput: [1, 2, 3, 4]', name: '1d Loop' },
+            { example: 'x = [[1, 2], [2, 3], [3, 4]]\nfor i, j in x: print((i, j))\nOutput:\n(1, 2)\n(2, 3)\n(3, 4)', name: '2d Loop' },
+            { example: 'x =  ["a","b","c","d"]\narr = []\nfor i, j in enumerate(x): arr.append([i,j])\nprint(arr)\nOutput:[[0, "a"], [1, "b"], [2, "c"], [3, "d"]]', name: '1d + index' },
+        ],
         link: '',
         freq: 7640,
     },
@@ -317,8 +362,8 @@ let keywords = [
         name: 'in',
         description: ['Used to check if something is in an object'],
         type: ['String', 'Counter', 'Default-Dict', 'Dict', 'Operators', 'Set', 'Tuple', 'Keywords'],
-        best: '',
-        worst: '',
+        best: 'O(1)',
+        worst: 'O(n)',
         examples: [],
         link: '',
         freq: 29683,
@@ -413,6 +458,16 @@ let keywords = [
         link: '',
         freq: 1931,
     },
+    {
+        name: 'yield',
+        description: ['Used to return a generator'],
+        type: ['Keywords'],
+        best: '',
+        worst: '',
+        examples: [],
+        link: '',
+        freq: 65,
+    },
 ];
 
 let methods = [
@@ -460,8 +515,8 @@ let methods = [
         name: 'append()',
         description: ['Adds an element to the end of a list'],
         type: ['Deque', 'List'],
-        best: '',
-        worst: '',
+        best: 'O(1)',
+        worst: 'O(1)',
         examples: [],
         link: '',
         freq: 2116,
@@ -470,8 +525,8 @@ let methods = [
         name: 'appendleft()',
         description: ['Adds an element to the left side of a deque'],
         type: ['Deque'],
-        best: '',
-        worst: '',
+        best: 'O(1)',
+        worst: 'O(1)',
         examples: [],
         link: '',
         freq: 12,
@@ -595,8 +650,8 @@ let methods = [
         name: 'extend()',
         description: ['Joins one list to the end of another'],
         type: ['Deque', 'List'],
-        best: '',
-        worst: '',
+        best: 'O(k)',
+        worst: 'O(k)',
         examples: [],
         link: '',
         freq: 34,
@@ -645,7 +700,7 @@ let methods = [
 
     {
         name: 'gcd()',
-        description: [],
+        description: ['Returns the greatest common divisor between two integers', 'import math'],
         type: ['Math-Methods'],
         best: '',
         worst: '',
@@ -655,7 +710,7 @@ let methods = [
     },
     {
         name: 'get()',
-        description: [],
+        description: ['Return the value for the specified key if it exists'],
         type: ['Counter', 'Default-Dict', 'Dict'],
         best: '',
         worst: '',
@@ -665,9 +720,9 @@ let methods = [
     },
     {
         name: 'heapify()',
-        description: [],
+        description: ['Transform a list into a heap in place'],
         type: ['Heapq'],
-        best: '',
+        best: 'O(n)',
         worst: '',
         examples: [],
         link: '',
@@ -675,7 +730,7 @@ let methods = [
     },
     {
         name: 'heappop()',
-        description: [],
+        description: ['Pop and return the smallest element found in a heap'],
         type: ['Heapq'],
         best: '',
         worst: '',
@@ -685,7 +740,7 @@ let methods = [
     },
     {
         name: 'heappush()',
-        description: [],
+        description: ['Pushes the element onto a heap'],
         type: ['Heapq'],
         best: '',
         worst: '',
@@ -695,7 +750,7 @@ let methods = [
     },
     {
         name: 'heappushpop()',
-        description: [],
+        description: ['Combines the functionality of heappush() and heappop() and is faster than calling each individually'],
         type: ['Heapq'],
         best: '',
         worst: '',
@@ -706,7 +761,7 @@ let methods = [
 
     {
         name: 'index()',
-        description: [],
+        description: ['Returns the index of the first element with the specified value'],
         type: ['Deque', 'List', 'String', 'Tuple'],
         best: '',
         worst: '',
@@ -716,7 +771,7 @@ let methods = [
     },
     {
         name: 'insert()',
-        description: [],
+        description: ['Inserts an element at the specified index'],
         type: ['Deque', 'List'],
         best: '',
         worst: '',
@@ -726,7 +781,7 @@ let methods = [
     },
     {
         name: 'int()',
-        description: [],
+        description: ['Converts strings or other number formats to an integer and returns that value'],
         type: ['Default-Functions'],
         best: '',
         worst: '',
@@ -736,7 +791,7 @@ let methods = [
     },
     {
         name: 'isdigit()',
-        description: [],
+        description: ['Returns true if all the characters in a string are digits'],
         type: ['String'],
         best: '',
         worst: '',
@@ -746,7 +801,7 @@ let methods = [
     },
     {
         name: 'items()',
-        description: [],
+        description: ['Returns the key value pairs of a dictionary in the form of tuples in a list'],
         type: ['Counter', 'Default-Dict', 'Dict'],
         best: '',
         worst: '',
@@ -756,7 +811,7 @@ let methods = [
     },
     {
         name: 'iter()',
-        description: [],
+        description: ['Converts an iterable into an iterator object and returns it'],
         type: ['Default-Functions'],
         best: '',
         worst: '',
@@ -766,7 +821,7 @@ let methods = [
     },
     {
         name: 'join()',
-        description: [],
+        description: ['Converts the elements of an iterable into a string'],
         type: ['String'],
         best: '',
         worst: '',
@@ -776,7 +831,7 @@ let methods = [
     },
     {
         name: 'keys()',
-        description: [],
+        description: ['Returns a list of dictionary keys as a view object'],
         type: ['Counter', 'Default-Dict', 'Dict'],
         best: '',
         worst: '',
@@ -787,7 +842,7 @@ let methods = [
 
     {
         name: 'len()',
-        description: [],
+        description: ['Returns the length of an object'],
         type: ['Counter', 'Default-Dict', 'Default-Functions', 'Dict', 'List', 'Set'],
         best: '',
         worst: '',
@@ -797,7 +852,7 @@ let methods = [
     },
     {
         name: 'list()',
-        description: [],
+        description: ['Returns a list'],
         type: ['Default-Functions', 'List'],
         best: '',
         worst: '',
@@ -807,7 +862,7 @@ let methods = [
     },
     {
         name: 'log()',
-        description: [],
+        description: ['returns the logarithm of a number', 'import math'],
         type: ['Math-Methods'],
         best: '',
         worst: '',
@@ -817,7 +872,7 @@ let methods = [
     },
     {
         name: 'lower()',
-        description: [],
+        description: ['Converts a string to lowercase and returns it'],
         type: ['String'],
         best: '',
         worst: '',
@@ -827,7 +882,7 @@ let methods = [
     },
     {
         name: 'map()',
-        description: [],
+        description: ['Runs the specified function for every element in an iterable'],
         type: ['Default-Functions'],
         best: '',
         worst: '',
@@ -837,7 +892,7 @@ let methods = [
     },
     {
         name: 'max()',
-        description: [],
+        description: ['Finds the largest item in an iterable and returns it'],
         type: ['Default-Functions', 'List'],
         best: '',
         worst: '',
@@ -847,7 +902,7 @@ let methods = [
     },
     {
         name: 'min()',
-        description: [],
+        description: ['Finds the smallest item in an iterable and returns it'],
         type: ['Default-Functions', 'List'],
         best: '',
         worst: '',
@@ -857,7 +912,7 @@ let methods = [
     },
     {
         name: 'most_common()',
-        description: [],
+        description: ['Return a list of the most common elements and their counts. Returns them in descending order'],
         type: ['Counter'],
         best: '',
         worst: '',
@@ -867,7 +922,7 @@ let methods = [
     },
     {
         name: 'next()',
-        description: [],
+        description: ['Returns the next item found in an iterable'],
         type: ['Default-Functions'],
         best: '',
         worst: '',
@@ -877,7 +932,7 @@ let methods = [
     },
     {
         name: 'ord()',
-        description: [],
+        description: ['Returns the integer value based on a provided unicode character'],
         type: ['Default-Functions'],
         best: '',
         worst: '',
@@ -887,7 +942,7 @@ let methods = [
     },
     {
         name: 'partition()',
-        description: [],
+        description: ['Splits a string into three parts based on a provided key and returns them as a tuple'],
         type: ['String'],
         best: '',
         worst: '',
@@ -897,27 +952,30 @@ let methods = [
     },
     {
         name: 'pop()',
-        description: [],
+        description: [
+            'Returns the last item in an iterable, or a specified item if an argument is provided',
+            'Deque: Remove and return an element from the right side of the deque',
+        ],
         type: ['Dict', 'Deque', 'List', 'Default-Dict', 'Counter', 'Set'],
-        best: '',
-        worst: '',
+        best: 'O(1)',
+        worst: 'O(n)',
         examples: [],
         link: '',
         freq: 655,
     },
     {
         name: 'popleft()',
-        description: [],
+        description: ['Remove and return an element from the left side of the deque'],
         type: ['Deque'],
-        best: '',
-        worst: '',
+        best: 'O(1)',
+        worst: 'O(1)',
         examples: [],
         link: '',
         freq: 110,
     },
     {
         name: 'pow()',
-        description: [],
+        description: ['Returns the value of x to the power y'],
         type: ['Math-Methods'],
         best: '',
         worst: '',
@@ -927,7 +985,7 @@ let methods = [
     },
     {
         name: 'print()',
-        description: [],
+        description: ['Prints the specified content to the console or other output device'],
         type: ['Default-Functions'],
         best: '',
         worst: '',
@@ -937,7 +995,7 @@ let methods = [
     },
     {
         name: 'range()',
-        description: [],
+        description: ['Returns a sequence of numbers, starting from 0 and increments by 1 (by default)'],
         type: ['Default-Functions'],
         best: '',
         worst: '',
@@ -947,7 +1005,7 @@ let methods = [
     },
     {
         name: 'reduce()',
-        description: [],
+        description: ['Applies a specified function to all the elements in a list', 'import functools'],
         type: ['List'],
         best: '',
         worst: '',
@@ -957,10 +1015,10 @@ let methods = [
     },
     {
         name: 'remove()',
-        description: [],
+        description: ['Removes the first matching element in a set or list'],
         type: ['Deque', 'List', 'Set'],
-        best: '',
-        worst: '',
+        best: 'O(n)',
+        worst: 'O(n)',
         examples: [],
         link: '',
         freq: 98,
@@ -968,7 +1026,7 @@ let methods = [
 
     {
         name: 'reverse()',
-        description: [],
+        description: ['Reverses the order of a list in place'],
         type: ['Deque', 'List'],
         best: '',
         worst: '',
@@ -978,7 +1036,7 @@ let methods = [
     },
     {
         name: 'reversed()',
-        description: [],
+        description: ['Returns a reversed iterator object'],
         type: ['Default-Functions'],
         best: '',
         worst: '',
@@ -988,7 +1046,7 @@ let methods = [
     },
     {
         name: 'set()',
-        description: [],
+        description: ['Creates a set'],
         type: ['Set', 'Default-Functions'],
         best: '',
         worst: '',
@@ -998,7 +1056,7 @@ let methods = [
     },
     {
         name: 'setdefault()',
-        description: [],
+        description: ['Returns the value of a key in a dictionary, if it doesnt exist the specified value is inserted at the provided key'],
         type: ['Default-Dict', 'Counter', 'Dict'],
         best: '',
         worst: '',
@@ -1008,7 +1066,7 @@ let methods = [
     },
     {
         name: 'sort()',
-        description: [],
+        description: ['Sorts the list in ascending order, or differently based on a provided sort function'],
         type: ['List'],
         best: '',
         worst: '',
@@ -1018,7 +1076,7 @@ let methods = [
     },
     {
         name: 'sorted()',
-        description: [],
+        description: ['Sorts the elements of an iterable in a specified order'],
         type: ['Default-Functions', 'Default-Dict', 'Counter', 'Dict'],
         best: '',
         worst: '',
@@ -1028,7 +1086,7 @@ let methods = [
     },
     {
         name: 'split()',
-        description: [],
+        description: ['Splits the string using the specified delimiter, and returns a list'],
         type: ['String'],
         best: '',
         worst: '',
@@ -1038,7 +1096,7 @@ let methods = [
     },
     {
         name: 'sqrt()',
-        description: [],
+        description: ['Returns the square root of a number', 'import math'],
         type: ['Math-Methods'],
         best: '',
         worst: '',
@@ -1048,7 +1106,7 @@ let methods = [
     },
     {
         name: 'str()',
-        description: [],
+        description: ['Converts a provided value into a string and returns it'],
         type: ['Default-Functions'],
         best: '',
         worst: '',
@@ -1058,7 +1116,7 @@ let methods = [
     },
     {
         name: 'sum()',
-        description: [],
+        description: ['Adds the items in an iterable and returns the sum'],
         type: ['Default-Functions'],
         best: '',
         worst: '',
@@ -1068,7 +1126,7 @@ let methods = [
     },
     {
         name: 'total()',
-        description: [],
+        description: ['Returns the sum of the counts'],
         type: ['Counter'],
         best: '',
         worst: '',
@@ -1079,7 +1137,7 @@ let methods = [
 
     {
         name: 'tuple()',
-        description: [],
+        description: ['Returns a tuple'],
         type: ['Default-Functions'],
         best: '',
         worst: '',
@@ -1089,7 +1147,7 @@ let methods = [
     },
     {
         name: 'update()',
-        description: [],
+        description: ['Dict: Updates the dictionary with the specified key-value pairs', 'Set: Update the set with another set, or any other iterable'],
         type: ['Set', 'Default-Dict', 'Counter', 'Dict'],
         best: '',
         worst: '',
@@ -1099,7 +1157,7 @@ let methods = [
     },
     {
         name: 'upper()',
-        description: [],
+        description: ['Converts a string to uppercase and returns it'],
         type: ['String'],
         best: '',
         worst: '',
@@ -1109,7 +1167,7 @@ let methods = [
     },
     {
         name: 'values()',
-        description: [],
+        description: ['Returns a list of all the values in the dictionary'],
         type: ['Default-Dict', 'Counter', 'Dict'],
         best: '',
         worst: '',
@@ -1119,7 +1177,7 @@ let methods = [
     },
     {
         name: 'zip()',
-        description: [],
+        description: ['Returns an iterator of tuples based on the provided iterables'],
         type: ['Default-Functions'],
         best: '',
         worst: '',
@@ -1135,58 +1193,92 @@ let methods = [
 let categories = [
     {
         name: 'Counter',
-        description: [],
-        examples: ['import collections'],
+        description: ['A subclass of dict that is used to count hashable objects and save them as key value pairs'],
+        examples: [
+            { example: 'from collections import counter', name: 'importing' },
+            { example: 'x = Counter(iterable)', name: 'Creation' },
+        ],
     },
     {
         name: 'Default-Dict',
-        description: [],
-        examples: ['import defaultdict'],
+        description: ['A subclass of dict that accepts an argument to define its default factory, such as list, dict, int, etc'],
+        examples: [
+            { example: 'from collections import defaultdict', name: 'Importing' },
+            {
+                example: 'l = [1,2,3,4]\nd = defaultdict(list)\nfor x in l: d[x].append(1)\nprint(d)\nOutput: {1: [1], 2: [1], 3: [1], 4: [1]}',
+                name: 'list as default factory',
+            },
+            {
+                example: 'l = [1,2,3]\nd = defaultdict(dict)\nfor x in l: d[x][x] = "a"print(d)\nOutput: {1: {1: "a"}, 2: {2: "a"}, 3: {3: "a"}',
+                name: 'dict as default factory',
+            },
+        ],
     },
     {
         name: 'Default-Functions',
-        description: [],
-        examples: [],
+        description: ['All the default functions in python that are relevant to leetcode'],
+        examples: [{ example: 'FunctionName()', name: 'Syntax' }],
     },
     {
         name: 'Deque',
-        description: [],
-        examples: ['import deque'],
+        description: ['Deques are double ended queues that allow quick access to both ends'],
+        examples: [
+            { example: 'from collections import deque', name: 'Importing' },
+            { example: 'x = deque(iterable)', name: 'Creation' },
+        ],
     },
     {
         name: 'Dict',
-        description: [],
-        examples: ["dict = {'x':y}"],
+        description: ['Dicts are ordered and changable collections. Duplicate values not allowed'],
+        examples: [{ example: 'x = {"key": val}', name: 'Creation' }],
     },
     {
         name: 'Heapq',
-        description: [],
-        examples: ['heap = []'],
+        description: ['Heaps are binary trees for which every parent node has a value less than or equal to any of its children'],
+        examples: [
+            { example: 'import heapq', name: 'Importing' },
+            { example: 'heapq.heapify(list)', name: 'Creation' },
+        ],
     },
     {
         name: 'List',
-        description: [],
-        examples: [],
+        description: ['Lists are ordered and changable collections. Duplicate values allowed'],
+        examples: [
+            { example: 'x = []', name: 'Creation' },
+            { example: 'x = list(iterable)' },
+            { example: 'x = [1,2,3,4]\nprint([i+1 for i in x])\nOutput: [2, 3, 4, 5] ', name: 'List Comprehension' },
+            { example: 'print([3*i for i in range(10) if i % 2 == 0])\nOutput: [0, 6, 12, 18, 24]', name: 'List comprehension + conditional' },
+            {
+                example: 'x = [1, 2, 3, 2]\ny = [[1, 2], [2, 3], [3, 4], [4, 5]]\nprint([sum(i*j+k for i, j in y) for k in x])\nOutput: [44, 48, 52, 48] ',
+                name: '2d list comprehension',
+            },
+        ],
     },
     {
         name: 'Math-Methods',
-        description: [],
-        examples: [],
+        description: ['Various math methods that are relevent to leetcode'],
+        examples: [{ example: 'import math', name: 'Importing' }],
     },
     {
         name: 'Set',
-        description: [],
-        examples: ['set = {x,y,z}'],
+        description: ['Unordered collection of values. Cannot contain duplicate values'],
+        examples: [
+            { example: 'x = {x,y,z}', name: 'Creation' },
+            { example: 'x = set(iterable)' },
+            { example: 'x = [1, 2, 3, 4]\nprint({i+1 for i in x})\nOutput: {2, 3, 4, 5}', name: 'Set comprehension' },
+            { example: 'print({3*i for i in range(5) if i != 3})\nOutput: {0, 3, 12, 6}', name: 'Set comprehension + conditional' },
+            { example: 'x = [1, 2, 3, 2]\ny = [[1, 2], [2, 3], [3, 4], [4, 5]]\nprint({sum(i*j+k for i, j in y) for k in x})\nOutput: {48, 44, 52}', name: '2d set comprehension' },
+        ],
     },
     {
         name: 'String',
-        description: [],
-        examples: ['string = ""'],
+        description: ['Strings are collections of unicode characters'],
+        examples: [{ example: 'x = ""', name: 'Creation' }],
     },
     {
         name: 'Tuple',
-        description: [],
-        examples: ['tuple = ()'],
+        description: ['Tuples are ordered and unchangable collections. Duplicate values allowed'],
+        examples: [{ example: 'x = ()', name: 'Creation' }],
     },
 ];
 
@@ -1214,8 +1306,19 @@ let algorithms = [
     },
     {
         name: 'Heap Sort',
-        description: [],
-        examples: [],
+        description: ['A heapsort can be implemented by pushing values onto a heap and then popping off the smallest values one at a time'],
+        examples: [
+            {
+                example:
+                    'import heapq\n' +
+                    'def heapsort(iterable):\n' +
+                    '    h = []\n' +
+                    '    for val in iterable:\n' +
+                    '        heappush(h, val)\n' +
+                    '    return [heappop(h) for x in range(len(h))]',
+                name: 'Implementation',
+            },
+        ],
         freq: 253,
     },
     {
@@ -1361,7 +1464,7 @@ let dataStructures = [
     },
     {
         name: 'Matrix',
-        description: ["Matrix = A"],
+        description: ['Matrix = A'],
         examples: [
             { example: 'for x in range(len(A)):\n' + '    for y in range(x):\n' + '        A[x][y], A[y][x] = A[y][x], A[x][y]', name: 'Transpose (swap cols and rows)' },
             { example: 'A[:] = A[::-1]', name: 'Reverse (slower)' },
@@ -1471,7 +1574,7 @@ function createExamples(x) {
     for (let i = 0; i < x.examples.length; i++) {
         let item = document.createElement('li');
         let wrap = document.createElement('pre');
-        if (x.examples[i].name){
+        if (x.examples[i].name) {
             let head = document.createElement('h3');
             head.innerHTML = x.examples[i].name;
             item.appendChild(head);
@@ -1614,7 +1717,6 @@ function createCategory(x) {
     }
     if (x.examples[0]) {
         dropDown.appendChild(createExamples(x));
-        dropDown.appendChild(createHr());
     }
 
     container.appendChild(dropDown);
